@@ -1,0 +1,22 @@
+{%  extends 'base.html' %}
+
+{% block title %}
+News
+{% endblock %}
+{% block content %}
+<h1>Новости</h1>
+<table>
+    <tr>
+        <th>Заголовок</th>
+        <th>Описание</th>
+        <th>Дата</th>
+    </tr>
+    {% for new in news %}
+    <tr>
+        <td>{{ new.title }}</td>
+        <td>{{ new.descr }}</td>
+        <td>{{ new.date }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

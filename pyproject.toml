@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "flask"
+name = "flask/fastAPI"
 version = "0.1.0"
 description = ""
 authors = ["Maksim Aleksanin <maksim.g00gle@gmail.com>"]
@@ -8,6 +8,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">3.11, <3.12"
+flask = "^3.0.0"
 
 [tool.poetry.group.dev.dependencies]
 pylint = "^3.0.3"
