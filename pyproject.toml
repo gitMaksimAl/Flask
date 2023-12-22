@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "flask"
+version = "0.1.0"
+description = ""
+authors = ["Maksim Aleksanin <maksim.g00gle@gmail.com>"]
+license = "no liscense"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">3.11, <3.12"
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^3.0.3"
+pyright = "^1.1.342"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
