@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Мой сайт{% endblock title %}</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='/style/style.css') }}">
+</head>
+<body>
+{% block menu %}
+<div id="menubar">
+    <ul id="menu">
+    {% for item in menu_items %}
+        <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock menu %}
+{% block content %}
+<h1>{% block h1 %}Мой сайт{% endblock h1 %}</h1>
+{% endblock content %}
+</body>
+</html>

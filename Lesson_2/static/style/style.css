@@ -1,0 +1,24 @@
+#menubar {
+    height: 42px;
+    width: 880px;
+}
+
+ul#menu {
+    float: left;
+}
+
+ul#menu li {
+    float: left;
+    list-style: none;
+    margin: 3px 2px 0 0;
+    padding: 1px 1px 0 0;
+    background: #B7B9A7;
+}
+
+ul#menu li a {
+    display: inline-table;
+    float: left;
+    text-align: center;
+    text-decoration: #3A7734;
+    color: black;
+}
