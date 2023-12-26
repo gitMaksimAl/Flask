@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+<ul id="menu">
+  <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+  <li><a href="/">Home</a></li>
+  <li><a href="/Clothes">Clothes</a></li>
+  <li class="selected"><a href="/Shoes">Shoes</a></li>
+  <li><a href="/Contact">Contact Us</a></li>
+  <li><a href="/Info">Info</a></li>
+</ul>
+{% endblock %}
+
+{% block content %}
+{% for item in shoes %}
+<div class="Item"><h3><a href="/Shoes/{{ item }}">{{ item }}</a></h3>
+  <div>
+    <img src="/static/image/shoes.png" class="Item_image">
+  </div>
+  <span>
+    <ul>
+      <li>{{ shoes[item].description }}</li>
+      <li>{{ shoes[item].size }}</li>
+      <li>{{ shoes[item].color }}</li>
+      <li>{{ shoes[item].price }}</li>
+    </ul>
+  </span>
+</div>
+{% endfor %}
+{% endblock %}
