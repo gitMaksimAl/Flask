@@ -1,11 +1,28 @@
+div.container {
+    background: linear-gradient(#5900ff, #8000ff, #ae00ff);
+    width: 30%;
+    padding: 5px 15px;
+    border: 2px black;
+    border-radius: 5px;
+}
+
 ul li {
     display: inline;
+    padding-left: 15px;
     text-decoration: none;
     list-style: none;
     color: mediumpurple;
 }
 
 button {
-    border: 2px rebeccapurple;
-    border-radius: 15px;
+    display: inline-block;
+    width: 54px;
+    height: 28px;
+    border-radius: 10px;
+    transition-duration: 0.7s;
+}
+
+button:hover {
+    color: mediumpurple;
+    border-color: rebeccapurple;
 }
