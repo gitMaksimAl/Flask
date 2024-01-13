@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SQLAlchemy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <h2>{{ login }}</h2>
+    <nav>
+      <ul>
+        {% for item in menu %}
+        <li><a href="{{ item.uri }}">{{ item.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    {% block content %}
+    {% endblock content %}
+  </body>
+</html>

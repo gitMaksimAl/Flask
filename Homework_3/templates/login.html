@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <div class="container">
+        <form action="{{ url_for('log_in') }}" method="POST">
+            {{ form.csrf_token }}
+
+                {% if alert_message %}
+                    <div class="alert alert-danger">
+                            <p>{{ alert_message }}</p>
+                    </div>
+                {% endif %}
+
+            <p>
+                {% for field in form if field.name != 'csrf_token' %}
+                    {{ field.label }}<br>
+                    {{ field(size=32) }}
+                    {% if field.errors %}
+                        <ul class="alert alert-danger">
+                            {% for error in field.errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                {% endif %}
+            </p>
+            {% endfor %}
+            <button type="submit" value="In">
+	    </form>
+        <form action="{{ url_for('log_out') }}" method="GET">
+            <button type="submit" value="Out">
+        </form>
+    </div>
+{% endblock content %}
