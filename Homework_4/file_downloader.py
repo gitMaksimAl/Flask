@@ -6,7 +6,6 @@ import aiohttp
 import re
 from time import time
 import requests
-from typing import Callable
 
 
 class FileDownloader(ABC):
