@@ -18,6 +18,9 @@ requests = "^2.31.0"
 aiohttp = "^3.9.1"
 pywebcopy = "^7.0.2"
 aiofiles = "^23.2.1"
+fastapi = "^0.109.0"
+uvicorn = {extras = ["standart"], version = "^0.26.0"}
+python-multipart = "^0.0.6"
 
 
 [tool.poetry.group.dev.dependencies]
