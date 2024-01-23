@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "lesson-6"
+version = "0.1.0"
+description = "FastAPI, databases, sqlalchemy"
+authors = ["Maksim Aleksanin <maksim.g00gle@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+fastapi = "^0.109.0"
+uvicorn = "^0.27.0"
+databases = {extras = ["aiosqlite"], version = "^0.8.0"}
+bcrypt = "^4.1.2"
+pydantic = {extras = ["email"], version = "^2.5.3"}
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^3.0.3"
+pyright = "^1.1.348"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
